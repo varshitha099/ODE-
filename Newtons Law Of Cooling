@@ -1,0 +1,16 @@
+import math
+
+initial_temperature = int(input("Enter initial temperature: "))
+final_temperature = int(input("Enter final temperature: "))
+time = int(input("Enter time: "))
+room_temperature = int(input("Enter room temperature: "))
+time_at_which_temperature_is_measured = int(input("Enter temperature to find time: "))
+
+c = initial_temperature - room_temperature
+print("C =", c)
+
+a = (-1 / time) * math.log((final_temperature - room_temperature) / c)
+print("K =", a)
+
+t = -math.log((time_at_which_temperature_is_measured - room_temperature) / c) / a
+print("Time at which temperature is measured (t) =", t)
