@@ -1,0 +1,19 @@
+import math
+
+def growth_with_exponential(initial_value, growth_rate, time_period):
+
+    return initial_value * math.exp(growth_rate * time_period)
+
+def decay_with_exponential(initial_value, decay_rate, time_period):
+   
+    return initial_value * math.exp(-decay_rate * time_period)
+
+initial = float(input("Enter the initial value: "))
+final = float(input("Enter the final value: "))
+time = float(input("Enter the time period between initial and final value: "))
+
+rate = math.log(final / initial) / time
+
+t = float(input("Enter the time to find N: "))
+
+print("Value after growth: ", growth_with_exponential(initial, rate, t))
